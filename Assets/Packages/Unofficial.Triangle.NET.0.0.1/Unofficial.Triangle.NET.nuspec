@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
+  <metadata>
+    <id>Unofficial.Triangle.NET</id>
+    <version>0.0.1</version>
+    <title>Triangle</title>
+    <authors>aardvark platform team</authors>
+    <owners>aardvark platform team</owners>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <projectUrl>https://github.com/wo80/Triangle.NET.git/</projectUrl>
+    <description>"Triangle.NET is a 2D quality mesh generator and Delaunay triangulator."</description>
+    <releaseNotes>initial</releaseNotes>
+  </metadata>
+</package>

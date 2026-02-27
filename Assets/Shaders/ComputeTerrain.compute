@@ -1,0 +1,158 @@
+// Each #kernel tells which function to compile; you can have many kernels
+#pragma kernel CSMain
+
+//Texture2D<float4> _HeightMap;
+//SamplerState sampler_HeightMap;
+
+static const float PI = 3.14159265;
+static const float DEG2RAD = PI / 180.0;
+
+struct TerrainVertex
+{
+    float3 latLongAlt;
+    float3 pos3D;
+    float2 uv;
+    int onBorder;
+    int isCoastOrOcean;
+    int accepted;
+};
+
+int nbBorderPoints;
+int nbTotalPoints;
+
+//Texture2D Heightmap;
+
+Texture2D Heightmap;
+SamplerState sampler_Heightmap;
+
+float resolution;
+
+float heightFactor;
+
+float2 bounds;
+
+RWStructuredBuffer<TerrainVertex> verticesData;
+
+float InverseLerp(float a, float b, float t)
+{
+    return saturate((t - a)/(b - a));
+}
+
+bool isInsidePolygon(TerrainVertex p) 
+{
+    uint cpt = 0;
+    for (uint i = 0; i < nbBorderPoints; i++)
+    {
+        TerrainVertex p1 = verticesData[i];
+        TerrainVertex p2 = verticesData[(i + 1) % nbBorderPoints];
+        if (((p.latLongAlt.y < p1.latLongAlt.y) != (p.latLongAlt.y < p2.latLongAlt.y)) && (p.latLongAlt.x < p1.latLongAlt.x + ((p.latLongAlt.y - p1.latLongAlt.y) / (p2.latLongAlt.y - p1.latLongAlt.y)) * (p2.latLongAlt.x - p1.latLongAlt.x)))
+        {
+            cpt++;
+        }
+    }
+    if (p.isCoastOrOcean) {
+        return (cpt % 2) != 1;
+    }else {
+        return (cpt % 2) == 1;
+    }
+}
+
+float3 latLongAltToSphere(float3 latLongAlt) {
+    float3 res = 0;
+    float r = (6378.137 + latLongAlt.z*heightFactor)/6378.137;
+    float phi = latLongAlt.x * DEG2RAD;
+    float lam = latLongAlt.y * DEG2RAD;
+    res.x = r * cos(phi) * cos(lam);
+    res.y = r * sin(phi);
+    res.z = r * cos(phi) * sin(lam);
+    return res;
+    /*float lat = v.x * Mathf.Deg2Rad;
+    float lng = v.y * Mathf.Deg2Rad;
+
+    float radius = 6378137.0f;
+    float flatFactor = 1.0f / 298.257223563f; // For WGS84 Model
+    float cosLat = Mathf.Cos(lat);
+    float sinLat = Mathf.Sin(lng);
+
+    float ff = (1f - flatFactor) * (1f - flatFactor);
+    float C = 1f / Mathf.Sqrt(cosLat*cosLat + ff * (sinLat*sinLat));
+    float S = C * ff;
+
+    res.x = (radius * C + lat) * cosLat * Mathf.Cos(lng);
+    res.y = (radius * S + lat) * sinLat;
+    res.z = (radius * C + lat) * cosLat * Mathf.Sin(lng);*/
+}
+
+float2 sphereToUV(float3 pos3D) {
+    return float2(0.5, 0.5);
+}
+
+float2 latLongToUV(float lat, float lng) {
+    return float2(InverseLerp(-180, 180, lng), InverseLerp(-90, 90, lat));
+}
+
+bool isSimilarToNeighbours(TerrainVertex p, float height) {
+    float heightNorth = Heightmap.SampleLevel(sampler_Heightmap, latLongToUV(p.latLongAlt.x+resolution, p.latLongAlt.y), 0);
+    float heightSouth = Heightmap.SampleLevel(sampler_Heightmap, latLongToUV(p.latLongAlt.x-resolution, p.latLongAlt.y), 0);
+    float heightEast = Heightmap.SampleLevel(sampler_Heightmap, latLongToUV(p.latLongAlt.x, p.latLongAlt.y+resolution), 0);
+    float heightWest = Heightmap.SampleLevel(sampler_Heightmap, latLongToUV(p.latLongAlt.x, p.latLongAlt.y-resolution), 0);
+
+    float avgHeight = (heightNorth + heightSouth + heightEast + heightWest)/4;
+    float error = abs(height - avgHeight);
+
+    float eps = resolution * 0.5;
+
+    float dx = p.latLongAlt.x - bounds.y;
+    float dy = p.latLongAlt.y - bounds.x;
+
+    float k = round(dx / 1);
+    float m = round(dy / 1);
+
+    bool onGrid = (abs(dx - k * 1) < eps) && (abs(dy - m * 1) < eps);
+
+    return (error<=0.02 && !onGrid);
+}
+
+[numthreads(64,1,1)]
+void CSMain (uint3 id : SV_DispatchThreadID)
+{
+    if (id.x >= nbTotalPoints)
+        return;
+
+    verticesData[id.x].pos3D = float3(0,0,0);
+
+    TerrainVertex p = verticesData[id.x];
+
+    if (!p.onBorder && !isInsidePolygon(p)){
+        p.accepted = 0;
+        verticesData[id.x] = p;
+        return;
+    }else {
+        p.accepted = 1;
+    }
+
+    if (!p.isCoastOrOcean) {
+        //int2 pixel = latLongToPixel(p.latLongAlt.x, p.latLongAlt.y);
+        //float height = Heightmap.Load(int3(pixel,0)).r;
+
+        float height = Heightmap.SampleLevel(sampler_Heightmap, latLongToUV(p.latLongAlt.x, p.latLongAlt.y), 0);
+
+        if (!p.onBorder && isSimilarToNeighbours(p, height)) {
+            p.accepted = 0;
+            verticesData[id.x] = p;
+            return;
+        }
+
+        p.latLongAlt.z = lerp(0, 6400, height);
+    }else {
+        p.latLongAlt.z = 0;
+    }
+
+    p.pos3D = latLongAltToSphere(p.latLongAlt);
+    p.uv = sphereToUV(p.pos3D);
+
+    //p.uv.y = InverseLerp(-180, 180, p.pos.x);
+    //p.uv.x = InverseLerp(-90, 90, p.pos.y);
+
+    verticesData[id.x] = p;
+}

@@ -1,0 +1,980 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acfbb99eb9f359347baebcca6f59f447, type: 3}
+  m_Name: CountryDatabase
+  m_EditorClassIdentifier: Assembly-CSharp::CountryDatabase
+  sourceJson: {fileID: 4900000, guid: 9a3a4b38920a4cc4abe01ff6e2e9e7f0, type: 3}
+  countries:
+  - nameLong: Aruba
+    isoA3EH: ABW
+    isoN3: 533
+    index: 0
+  - nameLong: Afghanistan
+    isoA3EH: AFG
+    isoN3: 4
+    index: 1
+  - nameLong: Angola
+    isoA3EH: AGO
+    isoN3: 24
+    index: 2
+  - nameLong: Anguilla
+    isoA3EH: AIA
+    isoN3: 660
+    index: 3
+  - nameLong: Albania
+    isoA3EH: ALB
+    isoN3: 8
+    index: 4
+  - nameLong: "\xC5land Islands"
+    isoA3EH: ALA
+    isoN3: 248
+    index: 5
+  - nameLong: Andorra
+    isoA3EH: AND
+    isoN3: 20
+    index: 6
+  - nameLong: United Arab Emirates
+    isoA3EH: ARE
+    isoN3: 784
+    index: 7
+  - nameLong: Argentina
+    isoA3EH: ARG
+    isoN3: 32
+    index: 8
+  - nameLong: Armenia
+    isoA3EH: ARM
+    isoN3: 51
+    index: 9
+  - nameLong: American Samoa
+    isoA3EH: ASM
+    isoN3: 16
+    index: 10
+  - nameLong: Antarctica
+    isoA3EH: ATA
+    isoN3: 10
+    index: 11
+  - nameLong: Ashmore and Cartier Islands
+    isoA3EH: -99
+    isoN3: 36
+    index: 12
+  - nameLong: French Southern and Antarctic Lands
+    isoA3EH: ATF
+    isoN3: 260
+    index: 13
+  - nameLong: Antigua and Barbuda
+    isoA3EH: ATG
+    isoN3: 28
+    index: 14
+  - nameLong: Australia
+    isoA3EH: AUS
+    isoN3: 36
+    index: 15
+  - nameLong: Austria
+    isoA3EH: AUT
+    isoN3: 40
+    index: 16
+  - nameLong: Azerbaijan
+    isoA3EH: AZE
+    isoN3: 31
+    index: 17
+  - nameLong: Burundi
+    isoA3EH: BDI
+    isoN3: 108
+    index: 18
+  - nameLong: Belgium
+    isoA3EH: BEL
+    isoN3: 56
+    index: 19
+  - nameLong: Benin
+    isoA3EH: BEN
+    isoN3: 204
+    index: 20
+  - nameLong: Burkina Faso
+    isoA3EH: BFA
+    isoN3: 854
+    index: 21
+  - nameLong: Bangladesh
+    isoA3EH: BGD
+    isoN3: 50
+    index: 22
+  - nameLong: Bulgaria
+    isoA3EH: BGR
+    isoN3: 100
+    index: 23
+  - nameLong: Bahrain
+    isoA3EH: BHR
+    isoN3: 48
+    index: 24
+  - nameLong: Bahamas
+    isoA3EH: BHS
+    isoN3: 44
+    index: 25
+  - nameLong: Bosnia and Herzegovina
+    isoA3EH: BIH
+    isoN3: 70
+    index: 26
+  - nameLong: "Saint-Barth\xE9lemy"
+    isoA3EH: BLM
+    isoN3: 652
+    index: 27
+  - nameLong: Belarus
+    isoA3EH: BLR
+    isoN3: 112
+    index: 28
+  - nameLong: Belize
+    isoA3EH: BLZ
+    isoN3: 84
+    index: 29
+  - nameLong: Bermuda
+    isoA3EH: BMU
+    isoN3: 60
+    index: 30
+  - nameLong: Bolivia
+    isoA3EH: BOL
+    isoN3: 68
+    index: 31
+  - nameLong: Brazil
+    isoA3EH: BRA
+    isoN3: 76
+    index: 32
+  - nameLong: Barbados
+    isoA3EH: BRB
+    isoN3: 52
+    index: 33
+  - nameLong: Brunei Darussalam
+    isoA3EH: BRN
+    isoN3: 96
+    index: 34
+  - nameLong: Bhutan
+    isoA3EH: BTN
+    isoN3: 64
+    index: 35
+  - nameLong: Botswana
+    isoA3EH: BWA
+    isoN3: 72
+    index: 36
+  - nameLong: Central African Republic
+    isoA3EH: CAF
+    isoN3: 140
+    index: 37
+  - nameLong: Canada
+    isoA3EH: CAN
+    isoN3: 124
+    index: 38
+  - nameLong: Switzerland
+    isoA3EH: CHE
+    isoN3: 756
+    index: 39
+  - nameLong: Chile
+    isoA3EH: CHL
+    isoN3: 152
+    index: 40
+  - nameLong: China
+    isoA3EH: CHN
+    isoN3: 156
+    index: 41
+  - nameLong: "C\xF4te d'Ivoire"
+    isoA3EH: CIV
+    isoN3: 384
+    index: 42
+  - nameLong: Cameroon
+    isoA3EH: CMR
+    isoN3: 120
+    index: 43
+  - nameLong: Democratic Republic of the Congo
+    isoA3EH: COD
+    isoN3: 180
+    index: 44
+  - nameLong: Republic of the Congo
+    isoA3EH: COG
+    isoN3: 178
+    index: 45
+  - nameLong: Cook Islands
+    isoA3EH: COK
+    isoN3: 184
+    index: 46
+  - nameLong: Colombia
+    isoA3EH: COL
+    isoN3: 170
+    index: 47
+  - nameLong: Comoros
+    isoA3EH: COM
+    isoN3: 174
+    index: 48
+  - nameLong: Republic of Cabo Verde
+    isoA3EH: CPV
+    isoN3: 132
+    index: 49
+  - nameLong: Costa Rica
+    isoA3EH: CRI
+    isoN3: 188
+    index: 50
+  - nameLong: Cuba
+    isoA3EH: CUB
+    isoN3: 192
+    index: 51
+  - nameLong: "Cura\xE7ao"
+    isoA3EH: CUW
+    isoN3: 531
+    index: 52
+  - nameLong: Cayman Islands
+    isoA3EH: CYM
+    isoN3: 136
+    index: 53
+  - nameLong: Northern Cyprus
+    isoA3EH: -99
+    isoN3: -99
+    index: 54
+  - nameLong: Cyprus
+    isoA3EH: CYP
+    isoN3: 196
+    index: 55
+  - nameLong: Czech Republic
+    isoA3EH: CZE
+    isoN3: 203
+    index: 56
+  - nameLong: Germany
+    isoA3EH: DEU
+    isoN3: 276
+    index: 57
+  - nameLong: Djibouti
+    isoA3EH: DJI
+    isoN3: 262
+    index: 58
+  - nameLong: Dominica
+    isoA3EH: DMA
+    isoN3: 212
+    index: 59
+  - nameLong: Denmark
+    isoA3EH: DNK
+    isoN3: 208
+    index: 60
+  - nameLong: Dominican Republic
+    isoA3EH: DOM
+    isoN3: 214
+    index: 61
+  - nameLong: Algeria
+    isoA3EH: DZA
+    isoN3: 12
+    index: 62
+  - nameLong: Ecuador
+    isoA3EH: ECU
+    isoN3: 218
+    index: 63
+  - nameLong: Egypt
+    isoA3EH: EGY
+    isoN3: 818
+    index: 64
+  - nameLong: Eritrea
+    isoA3EH: ERI
+    isoN3: 232
+    index: 65
+  - nameLong: Spain
+    isoA3EH: ESP
+    isoN3: 724
+    index: 66
+  - nameLong: Estonia
+    isoA3EH: EST
+    isoN3: 233
+    index: 67
+  - nameLong: Ethiopia
+    isoA3EH: ETH
+    isoN3: 231
+    index: 68
+  - nameLong: Finland
+    isoA3EH: FIN
+    isoN3: 246
+    index: 69
+  - nameLong: Fiji
+    isoA3EH: FJI
+    isoN3: 242
+    index: 70
+  - nameLong: Falkland Islands
+    isoA3EH: FLK
+    isoN3: 238
+    index: 71
+  - nameLong: France
+    isoA3EH: -99
+    isoN3: 250
+    index: 72
+  - nameLong: Faeroe Islands
+    isoA3EH: FRO
+    isoN3: 234
+    index: 73
+  - nameLong: Federated States of Micronesia
+    isoA3EH: FSM
+    isoN3: 583
+    index: 74
+  - nameLong: Gabon
+    isoA3EH: GAB
+    isoN3: 266
+    index: 75
+  - nameLong: United Kingdom
+    isoA3EH: GBR
+    isoN3: 826
+    index: 76
+  - nameLong: Georgia
+    isoA3EH: GEO
+    isoN3: 268
+    index: 77
+  - nameLong: Guernsey
+    isoA3EH: GGY
+    isoN3: 831
+    index: 78
+  - nameLong: Ghana
+    isoA3EH: GHA
+    isoN3: 288
+    index: 79
+  - nameLong: Guinea
+    isoA3EH: GIN
+    isoN3: 324
+    index: 80
+  - nameLong: The Gambia
+    isoA3EH: GMB
+    isoN3: 270
+    index: 81
+  - nameLong: Guinea-Bissau
+    isoA3EH: GNB
+    isoN3: 624
+    index: 82
+  - nameLong: Equatorial Guinea
+    isoA3EH: GNQ
+    isoN3: 226
+    index: 83
+  - nameLong: Greece
+    isoA3EH: GRC
+    isoN3: 300
+    index: 84
+  - nameLong: Grenada
+    isoA3EH: GRD
+    isoN3: 308
+    index: 85
+  - nameLong: Greenland
+    isoA3EH: GRL
+    isoN3: 304
+    index: 86
+  - nameLong: Guatemala
+    isoA3EH: GTM
+    isoN3: 320
+    index: 87
+  - nameLong: Guam
+    isoA3EH: GUM
+    isoN3: 316
+    index: 88
+  - nameLong: Guyana
+    isoA3EH: GUY
+    isoN3: 328
+    index: 89
+  - nameLong: Hong Kong
+    isoA3EH: HKG
+    isoN3: 344
+    index: 90
+  - nameLong: Heard I. and McDonald Islands
+    isoA3EH: HMD
+    isoN3: 334
+    index: 91
+  - nameLong: Honduras
+    isoA3EH: HND
+    isoN3: 340
+    index: 92
+  - nameLong: Croatia
+    isoA3EH: HRV
+    isoN3: 191
+    index: 93
+  - nameLong: Haiti
+    isoA3EH: HTI
+    isoN3: 332
+    index: 94
+  - nameLong: Hungary
+    isoA3EH: HUN
+    isoN3: 348
+    index: 95
+  - nameLong: Indonesia
+    isoA3EH: IDN
+    isoN3: 360
+    index: 96
+  - nameLong: Isle of Man
+    isoA3EH: IMN
+    isoN3: 833
+    index: 97
+  - nameLong: India
+    isoA3EH: IND
+    isoN3: 356
+    index: 98
+  - nameLong: Indian Ocean Territories
+    isoA3EH: -99
+    isoN3: -99
+    index: 99
+  - nameLong: British Indian Ocean Territory
+    isoA3EH: IOT
+    isoN3: 86
+    index: 100
+  - nameLong: Ireland
+    isoA3EH: IRL
+    isoN3: 372
+    index: 101
+  - nameLong: Iran
+    isoA3EH: IRN
+    isoN3: 364
+    index: 102
+  - nameLong: Iraq
+    isoA3EH: IRQ
+    isoN3: 368
+    index: 103
+  - nameLong: Iceland
+    isoA3EH: ISL
+    isoN3: 352
+    index: 104
+  - nameLong: Israel
+    isoA3EH: ISR
+    isoN3: 376
+    index: 105
+  - nameLong: Italy
+    isoA3EH: ITA
+    isoN3: 380
+    index: 106
+  - nameLong: Jamaica
+    isoA3EH: JAM
+    isoN3: 388
+    index: 107
+  - nameLong: Jersey
+    isoA3EH: JEY
+    isoN3: 832
+    index: 108
+  - nameLong: Jordan
+    isoA3EH: JOR
+    isoN3: 400
+    index: 109
+  - nameLong: Japan
+    isoA3EH: JPN
+    isoN3: 392
+    index: 110
+  - nameLong: Siachen Glacier
+    isoA3EH: -99
+    isoN3: -99
+    index: 111
+  - nameLong: Kazakhstan
+    isoA3EH: KAZ
+    isoN3: 398
+    index: 112
+  - nameLong: Kenya
+    isoA3EH: KEN
+    isoN3: 404
+    index: 113
+  - nameLong: Kyrgyzstan
+    isoA3EH: KGZ
+    isoN3: 417
+    index: 114
+  - nameLong: Cambodia
+    isoA3EH: KHM
+    isoN3: 116
+    index: 115
+  - nameLong: Kiribati
+    isoA3EH: KIR
+    isoN3: 296
+    index: 116
+  - nameLong: Saint Kitts and Nevis
+    isoA3EH: KNA
+    isoN3: 659
+    index: 117
+  - nameLong: Republic of Korea
+    isoA3EH: KOR
+    isoN3: 410
+    index: 118
+  - nameLong: Kosovo
+    isoA3EH: -99
+    isoN3: -99
+    index: 119
+  - nameLong: Kuwait
+    isoA3EH: KWT
+    isoN3: 414
+    index: 120
+  - nameLong: Lao PDR
+    isoA3EH: LAO
+    isoN3: 418
+    index: 121
+  - nameLong: Lebanon
+    isoA3EH: LBN
+    isoN3: 422
+    index: 122
+  - nameLong: Liberia
+    isoA3EH: LBR
+    isoN3: 430
+    index: 123
+  - nameLong: Libya
+    isoA3EH: LBY
+    isoN3: 434
+    index: 124
+  - nameLong: Saint Lucia
+    isoA3EH: LCA
+    isoN3: 662
+    index: 125
+  - nameLong: Liechtenstein
+    isoA3EH: LIE
+    isoN3: 438
+    index: 126
+  - nameLong: Sri Lanka
+    isoA3EH: LKA
+    isoN3: 144
+    index: 127
+  - nameLong: Lesotho
+    isoA3EH: LSO
+    isoN3: 426
+    index: 128
+  - nameLong: Lithuania
+    isoA3EH: LTU
+    isoN3: 440
+    index: 129
+  - nameLong: Luxembourg
+    isoA3EH: LUX
+    isoN3: 442
+    index: 130
+  - nameLong: Latvia
+    isoA3EH: LVA
+    isoN3: 428
+    index: 131
+  - nameLong: Macao
+    isoA3EH: MAC
+    isoN3: 446
+    index: 132
+  - nameLong: Saint-Martin
+    isoA3EH: MAF
+    isoN3: 663
+    index: 133
+  - nameLong: Morocco
+    isoA3EH: MAR
+    isoN3: 504
+    index: 134
+  - nameLong: Monaco
+    isoA3EH: MCO
+    isoN3: 492
+    index: 135
+  - nameLong: Moldova
+    isoA3EH: MDA
+    isoN3: 498
+    index: 136
+  - nameLong: Madagascar
+    isoA3EH: MDG
+    isoN3: 450
+    index: 137
+  - nameLong: Maldives
+    isoA3EH: MDV
+    isoN3: 462
+    index: 138
+  - nameLong: Mexico
+    isoA3EH: MEX
+    isoN3: 484
+    index: 139
+  - nameLong: Marshall Islands
+    isoA3EH: MHL
+    isoN3: 584
+    index: 140
+  - nameLong: Macedonia
+    isoA3EH: MKD
+    isoN3: 807
+    index: 141
+  - nameLong: Mali
+    isoA3EH: MLI
+    isoN3: 466
+    index: 142
+  - nameLong: Malta
+    isoA3EH: MLT
+    isoN3: 470
+    index: 143
+  - nameLong: Myanmar
+    isoA3EH: MMR
+    isoN3: 104
+    index: 144
+  - nameLong: Montenegro
+    isoA3EH: MNE
+    isoN3: 499
+    index: 145
+  - nameLong: Mongolia
+    isoA3EH: MNG
+    isoN3: 496
+    index: 146
+  - nameLong: Northern Mariana Islands
+    isoA3EH: MNP
+    isoN3: 580
+    index: 147
+  - nameLong: Mozambique
+    isoA3EH: MOZ
+    isoN3: 508
+    index: 148
+  - nameLong: Mauritania
+    isoA3EH: MRT
+    isoN3: 478
+    index: 149
+  - nameLong: Montserrat
+    isoA3EH: MSR
+    isoN3: 500
+    index: 150
+  - nameLong: Mauritius
+    isoA3EH: MUS
+    isoN3: 480
+    index: 151
+  - nameLong: Malawi
+    isoA3EH: MWI
+    isoN3: 454
+    index: 152
+  - nameLong: Malaysia
+    isoA3EH: MYS
+    isoN3: 458
+    index: 153
+  - nameLong: Namibia
+    isoA3EH: NAM
+    isoN3: 516
+    index: 154
+  - nameLong: New Caledonia
+    isoA3EH: NCL
+    isoN3: 540
+    index: 155
+  - nameLong: Niger
+    isoA3EH: NER
+    isoN3: 562
+    index: 156
+  - nameLong: Norfolk Island
+    isoA3EH: NFK
+    isoN3: 574
+    index: 157
+  - nameLong: Nigeria
+    isoA3EH: NGA
+    isoN3: 566
+    index: 158
+  - nameLong: Nicaragua
+    isoA3EH: NIC
+    isoN3: 558
+    index: 159
+  - nameLong: Niue
+    isoA3EH: NIU
+    isoN3: 570
+    index: 160
+  - nameLong: Netherlands
+    isoA3EH: NLD
+    isoN3: 528
+    index: 161
+  - nameLong: Norway
+    isoA3EH: -99
+    isoN3: -99
+    index: 162
+  - nameLong: Nepal
+    isoA3EH: NPL
+    isoN3: 524
+    index: 163
+  - nameLong: Nauru
+    isoA3EH: NRU
+    isoN3: 520
+    index: 164
+  - nameLong: New Zealand
+    isoA3EH: NZL
+    isoN3: 554
+    index: 165
+  - nameLong: Oman
+    isoA3EH: OMN
+    isoN3: 512
+    index: 166
+  - nameLong: Pakistan
+    isoA3EH: PAK
+    isoN3: 586
+    index: 167
+  - nameLong: Panama
+    isoA3EH: PAN
+    isoN3: 591
+    index: 168
+  - nameLong: Pitcairn Islands
+    isoA3EH: PCN
+    isoN3: 612
+    index: 169
+  - nameLong: Peru
+    isoA3EH: PER
+    isoN3: 604
+    index: 170
+  - nameLong: Philippines
+    isoA3EH: PHL
+    isoN3: 608
+    index: 171
+  - nameLong: Palau
+    isoA3EH: PLW
+    isoN3: 585
+    index: 172
+  - nameLong: Papua New Guinea
+    isoA3EH: PNG
+    isoN3: 598
+    index: 173
+  - nameLong: Poland
+    isoA3EH: POL
+    isoN3: 616
+    index: 174
+  - nameLong: Puerto Rico
+    isoA3EH: PRI
+    isoN3: 630
+    index: 175
+  - nameLong: Dem. Rep. Korea
+    isoA3EH: PRK
+    isoN3: 408
+    index: 176
+  - nameLong: Portugal
+    isoA3EH: PRT
+    isoN3: 620
+    index: 177
+  - nameLong: Paraguay
+    isoA3EH: PRY
+    isoN3: 600
+    index: 178
+  - nameLong: Palestine
+    isoA3EH: PSE
+    isoN3: 275
+    index: 179
+  - nameLong: French Polynesia
+    isoA3EH: PYF
+    isoN3: 258
+    index: 180
+  - nameLong: Qatar
+    isoA3EH: QAT
+    isoN3: 634
+    index: 181
+  - nameLong: Romania
+    isoA3EH: ROU
+    isoN3: 642
+    index: 182
+  - nameLong: Russian Federation
+    isoA3EH: RUS
+    isoN3: 643
+    index: 183
+  - nameLong: Rwanda
+    isoA3EH: RWA
+    isoN3: 646
+    index: 184
+  - nameLong: Western Sahara
+    isoA3EH: ESH
+    isoN3: 732
+    index: 185
+  - nameLong: Saudi Arabia
+    isoA3EH: SAU
+    isoN3: 682
+    index: 186
+  - nameLong: Sudan
+    isoA3EH: SDN
+    isoN3: 729
+    index: 187
+  - nameLong: South Sudan
+    isoA3EH: SSD
+    isoN3: 728
+    index: 188
+  - nameLong: Senegal
+    isoA3EH: SEN
+    isoN3: 686
+    index: 189
+  - nameLong: Singapore
+    isoA3EH: SGP
+    isoN3: 702
+    index: 190
+  - nameLong: South Georgia and the Islands
+    isoA3EH: SGS
+    isoN3: 239
+    index: 191
+  - nameLong: Saint Helena
+    isoA3EH: SHN
+    isoN3: 654
+    index: 192
+  - nameLong: Solomon Islands
+    isoA3EH: SLB
+    isoN3: 90
+    index: 193
+  - nameLong: Sierra Leone
+    isoA3EH: SLE
+    isoN3: 694
+    index: 194
+  - nameLong: El Salvador
+    isoA3EH: SLV
+    isoN3: 222
+    index: 195
+  - nameLong: San Marino
+    isoA3EH: SMR
+    isoN3: 674
+    index: 196
+  - nameLong: Somaliland
+    isoA3EH: -99
+    isoN3: -99
+    index: 197
+  - nameLong: Somalia
+    isoA3EH: SOM
+    isoN3: 706
+    index: 198
+  - nameLong: Saint Pierre and Miquelon
+    isoA3EH: SPM
+    isoN3: 666
+    index: 199
+  - nameLong: Serbia
+    isoA3EH: SRB
+    isoN3: 688
+    index: 200
+  - nameLong: "S\xE3o Tom\xE9 and Principe"
+    isoA3EH: STP
+    isoN3: 678
+    index: 201
+  - nameLong: Suriname
+    isoA3EH: SUR
+    isoN3: 740
+    index: 202
+  - nameLong: Slovakia
+    isoA3EH: SVK
+    isoN3: 703
+    index: 203
+  - nameLong: Slovenia
+    isoA3EH: SVN
+    isoN3: 705
+    index: 204
+  - nameLong: Sweden
+    isoA3EH: SWE
+    isoN3: 752
+    index: 205
+  - nameLong: Swaziland
+    isoA3EH: SWZ
+    isoN3: 748
+    index: 206
+  - nameLong: Sint Maarten
+    isoA3EH: SXM
+    isoN3: 534
+    index: 207
+  - nameLong: Seychelles
+    isoA3EH: SYC
+    isoN3: 690
+    index: 208
+  - nameLong: Syria
+    isoA3EH: SYR
+    isoN3: 760
+    index: 209
+  - nameLong: Turks and Caicos Islands
+    isoA3EH: TCA
+    isoN3: 796
+    index: 210
+  - nameLong: Chad
+    isoA3EH: TCD
+    isoN3: 148
+    index: 211
+  - nameLong: Togo
+    isoA3EH: TGO
+    isoN3: 768
+    index: 212
+  - nameLong: Thailand
+    isoA3EH: THA
+    isoN3: 764
+    index: 213
+  - nameLong: Tajikistan
+    isoA3EH: TJK
+    isoN3: 762
+    index: 214
+  - nameLong: Turkmenistan
+    isoA3EH: TKM
+    isoN3: 795
+    index: 215
+  - nameLong: Timor-Leste
+    isoA3EH: TLS
+    isoN3: 626
+    index: 216
+  - nameLong: Tonga
+    isoA3EH: TON
+    isoN3: 776
+    index: 217
+  - nameLong: Trinidad and Tobago
+    isoA3EH: TTO
+    isoN3: 780
+    index: 218
+  - nameLong: Tunisia
+    isoA3EH: TUN
+    isoN3: 788
+    index: 219
+  - nameLong: Turkey
+    isoA3EH: TUR
+    isoN3: 792
+    index: 220
+  - nameLong: Taiwan
+    isoA3EH: TWN
+    isoN3: 158
+    index: 221
+  - nameLong: Tanzania
+    isoA3EH: TZA
+    isoN3: 834
+    index: 222
+  - nameLong: Uganda
+    isoA3EH: UGA
+    isoN3: 800
+    index: 223
+  - nameLong: Ukraine
+    isoA3EH: UKR
+    isoN3: 804
+    index: 224
+  - nameLong: Uruguay
+    isoA3EH: URY
+    isoN3: 858
+    index: 225
+  - nameLong: United States
+    isoA3EH: USA
+    isoN3: 840
+    index: 226
+  - nameLong: Uzbekistan
+    isoA3EH: UZB
+    isoN3: 860
+    index: 227
+  - nameLong: Vatican
+    isoA3EH: VAT
+    isoN3: 336
+    index: 228
+  - nameLong: Saint Vincent and the Grenadines
+    isoA3EH: VCT
+    isoN3: 670
+    index: 229
+  - nameLong: Venezuela
+    isoA3EH: VEN
+    isoN3: 862
+    index: 230
+  - nameLong: British Virgin Islands
+    isoA3EH: VGB
+    isoN3: 92
+    index: 231
+  - nameLong: United States Virgin Islands
+    isoA3EH: VIR
+    isoN3: 850
+    index: 232
+  - nameLong: Vietnam
+    isoA3EH: VNM
+    isoN3: 704
+    index: 233
+  - nameLong: Vanuatu
+    isoA3EH: VUT
+    isoN3: 548
+    index: 234
+  - nameLong: Wallis and Futuna Islands
+    isoA3EH: WLF
+    isoN3: 876
+    index: 235
+  - nameLong: Samoa
+    isoA3EH: WSM
+    isoN3: 882
+    index: 236
+  - nameLong: Yemen
+    isoA3EH: YEM
+    isoN3: 887
+    index: 237
+  - nameLong: South Africa
+    isoA3EH: ZAF
+    isoN3: 710
+    index: 238
+  - nameLong: Zambia
+    isoA3EH: ZMB
+    isoN3: 894
+    index: 239
+  - nameLong: Zimbabwe
+    isoA3EH: ZWE
+    isoN3: 716
+    index: 240
