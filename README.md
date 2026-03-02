@@ -6,5 +6,5 @@ Source des données :
 - Natural Earth : https://github.com/nvkelso/natural-earth-vector/tree/master
 - Blue Marble : https://science.nasa.gov/earth/earth-observatory/blue-marble-next-generation/topography-bathymetry-maps/ 
 
-![afrique](./afrique.png)
-![mexique](./mexique.png)
+![afrique](./afrique.PNG)
+![mexique](./mexique.PNG)
