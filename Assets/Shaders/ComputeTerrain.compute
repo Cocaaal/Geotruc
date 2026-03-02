@@ -40,6 +40,9 @@ float InverseLerp(float a, float b, float t)
 
 bool isInsidePolygon(TerrainVertex p) 
 {
+    if (p.isCoastOrOcean) {
+        return 1;
+    }
     uint cpt = 0;
     for (uint i = 0; i < nbBorderPoints; i++)
     {
@@ -50,11 +53,7 @@ bool isInsidePolygon(TerrainVertex p)
             cpt++;
         }
     }
-    if (p.isCoastOrOcean) {
-        return (cpt % 2) != 1;
-    }else {
-        return (cpt % 2) == 1;
-    }
+    return (cpt % 2) == 1;
 }
 
 float3 latLongAltToSphere(float3 latLongAlt) {

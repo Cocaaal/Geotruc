@@ -116,7 +116,10 @@ public class GeoMesh : MonoBehaviour
                     idx++;
                 }
             }
-            
+
+            Debug.Log(bounds.Bottom + " " + bounds.Left + " " + bounds.Top + " " + bounds.Right);
+            Debug.Log(nbBorderPoints + idx);
+
             ComputeTerrainShader(nbBorderPoints, resolution, bounds);
 
             List<TerrainVertex> gridVertices = GetGridVertices(verticesData);
@@ -171,6 +174,7 @@ public class GeoMesh : MonoBehaviour
     private void ComputeTerrainShader(int nbBorderPoints, float resolution, Rectangle bounds)
     {
         int kernelHandle = computeShader.FindKernel("CSMain");
+        Debug.Log(resolution);
 
         ComputeBuffer verticesBuffer = new ComputeBuffer(verticesData.Length, sizeof(float) * 8 + sizeof(int) * 3);
         verticesBuffer.SetData(verticesData);
